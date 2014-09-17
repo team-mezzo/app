@@ -21,6 +21,15 @@
 		8D1EF9371963941800D9D8B8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1EF9191963941800D9D8B8 /* UIKit.framework */; };
 		8D1EF93F1963941800D9D8B8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8D1EF93D1963941800D9D8B8 /* InfoPlist.strings */; };
 		8D1EF9411963941800D9D8B8 /* MezzoProt1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1EF9401963941800D9D8B8 /* MezzoProt1Tests.m */; };
+		8D52A49819649ABA00392EB2 /* CurrentDonationsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D52A49719649ABA00392EB2 /* CurrentDonationsTableViewController.m */; };
+		8D5A5B8C196D973900974183 /* DonationDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5A5B8B196D973900974183 /* DonationDetailsTableViewController.m */; };
+		8D878C3819648221002780C4 /* NewDonationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D878C3719648221002780C4 /* NewDonationTableViewController.m */; };
+		8D878C3B19648E1A002780C4 /* ChooseOrgTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D878C3A19648E1A002780C4 /* ChooseOrgTableViewController.m */; };
+		8D878C4319648F89002780C4 /* Donation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D878C3E19648F89002780C4 /* Donation.m */; };
+		8D878C4419648F89002780C4 /* FoodPortion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D878C4019648F89002780C4 /* FoodPortion.m */; };
+		8D878C4519648F89002780C4 /* Stakeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D878C4219648F89002780C4 /* Stakeholder.m */; };
+		8D878C4819649131002780C4 /* MezzoPrototypeData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D878C4719649131002780C4 /* MezzoPrototypeData.m */; };
+		8DBADE1C19685DDF00CC66C8 /* MezzoCurrentDonationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBADE1B19685DDF00CC66C8 /* MezzoCurrentDonationTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +62,24 @@
 		8D1EF93C1963941800D9D8B8 /* MezzoProt1Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MezzoProt1Tests-Info.plist"; sourceTree = "<group>"; };
 		8D1EF93E1963941800D9D8B8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8D1EF9401963941800D9D8B8 /* MezzoProt1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MezzoProt1Tests.m; sourceTree = "<group>"; };
+		8D52A49619649ABA00392EB2 /* CurrentDonationsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentDonationsTableViewController.h; sourceTree = "<group>"; };
+		8D52A49719649ABA00392EB2 /* CurrentDonationsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentDonationsTableViewController.m; sourceTree = "<group>"; };
+		8D5A5B8A196D973900974183 /* DonationDetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DonationDetailsTableViewController.h; sourceTree = "<group>"; };
+		8D5A5B8B196D973900974183 /* DonationDetailsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DonationDetailsTableViewController.m; sourceTree = "<group>"; };
+		8D878C3619648221002780C4 /* NewDonationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewDonationTableViewController.h; sourceTree = "<group>"; };
+		8D878C3719648221002780C4 /* NewDonationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewDonationTableViewController.m; sourceTree = "<group>"; };
+		8D878C3919648E1A002780C4 /* ChooseOrgTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseOrgTableViewController.h; sourceTree = "<group>"; };
+		8D878C3A19648E1A002780C4 /* ChooseOrgTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseOrgTableViewController.m; sourceTree = "<group>"; };
+		8D878C3D19648F89002780C4 /* Donation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Donation.h; sourceTree = "<group>"; };
+		8D878C3E19648F89002780C4 /* Donation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Donation.m; sourceTree = "<group>"; };
+		8D878C3F19648F89002780C4 /* FoodPortion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodPortion.h; sourceTree = "<group>"; };
+		8D878C4019648F89002780C4 /* FoodPortion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodPortion.m; sourceTree = "<group>"; };
+		8D878C4119648F89002780C4 /* Stakeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stakeholder.h; sourceTree = "<group>"; };
+		8D878C4219648F89002780C4 /* Stakeholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stakeholder.m; sourceTree = "<group>"; };
+		8D878C4619649131002780C4 /* MezzoPrototypeData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MezzoPrototypeData.h; sourceTree = "<group>"; };
+		8D878C4719649131002780C4 /* MezzoPrototypeData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MezzoPrototypeData.m; sourceTree = "<group>"; };
+		8DBADE1A19685DDF00CC66C8 /* MezzoCurrentDonationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MezzoCurrentDonationTableViewCell.h; sourceTree = "<group>"; };
+		8DBADE1B19685DDF00CC66C8 /* MezzoCurrentDonationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MezzoCurrentDonationTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,12 +139,21 @@
 		8D1EF91B1963941800D9D8B8 /* MezzoProt1 */ = {
 			isa = PBXGroup;
 			children = (
-				8D1EF9241963941800D9D8B8 /* MezzoAppDelegate.h */,
-				8D1EF9251963941800D9D8B8 /* MezzoAppDelegate.m */,
 				8D1EF9271963941800D9D8B8 /* Main.storyboard */,
+				8D5A5B8A196D973900974183 /* DonationDetailsTableViewController.h */,
+				8D5A5B8B196D973900974183 /* DonationDetailsTableViewController.m */,
+				8DBADE1A19685DDF00CC66C8 /* MezzoCurrentDonationTableViewCell.h */,
+				8DBADE1B19685DDF00CC66C8 /* MezzoCurrentDonationTableViewCell.m */,
+				8D52A49619649ABA00392EB2 /* CurrentDonationsTableViewController.h */,
+				8D52A49719649ABA00392EB2 /* CurrentDonationsTableViewController.m */,
+				8D878C3919648E1A002780C4 /* ChooseOrgTableViewController.h */,
+				8D878C3A19648E1A002780C4 /* ChooseOrgTableViewController.m */,
+				8D878C3619648221002780C4 /* NewDonationTableViewController.h */,
+				8D878C3719648221002780C4 /* NewDonationTableViewController.m */,
 				8D1EF92A1963941800D9D8B8 /* MezzoViewController.h */,
 				8D1EF92B1963941800D9D8B8 /* MezzoViewController.m */,
 				8D1EF92D1963941800D9D8B8 /* Images.xcassets */,
+				8D878C3C19648F89002780C4 /* Model */,
 				8D1EF91C1963941800D9D8B8 /* Supporting Files */,
 			);
 			path = MezzoProt1;
@@ -126,6 +162,8 @@
 		8D1EF91C1963941800D9D8B8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8D1EF9241963941800D9D8B8 /* MezzoAppDelegate.h */,
+				8D1EF9251963941800D9D8B8 /* MezzoAppDelegate.m */,
 				8D1EF91D1963941800D9D8B8 /* MezzoProt1-Info.plist */,
 				8D1EF91E1963941800D9D8B8 /* InfoPlist.strings */,
 				8D1EF9211963941800D9D8B8 /* main.m */,
@@ -150,6 +188,21 @@
 				8D1EF93D1963941800D9D8B8 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8D878C3C19648F89002780C4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8D878C3D19648F89002780C4 /* Donation.h */,
+				8D878C3E19648F89002780C4 /* Donation.m */,
+				8D878C3F19648F89002780C4 /* FoodPortion.h */,
+				8D878C4019648F89002780C4 /* FoodPortion.m */,
+				8D878C4119648F89002780C4 /* Stakeholder.h */,
+				8D878C4619649131002780C4 /* MezzoPrototypeData.h */,
+				8D878C4719649131002780C4 /* MezzoPrototypeData.m */,
+				8D878C4219648F89002780C4 /* Stakeholder.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,9 +303,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D878C3819648221002780C4 /* NewDonationTableViewController.m in Sources */,
+				8D878C4419648F89002780C4 /* FoodPortion.m in Sources */,
+				8D878C4319648F89002780C4 /* Donation.m in Sources */,
+				8D52A49819649ABA00392EB2 /* CurrentDonationsTableViewController.m in Sources */,
+				8D878C3B19648E1A002780C4 /* ChooseOrgTableViewController.m in Sources */,
 				8D1EF9261963941800D9D8B8 /* MezzoAppDelegate.m in Sources */,
 				8D1EF92C1963941800D9D8B8 /* MezzoViewController.m in Sources */,
+				8D878C4519648F89002780C4 /* Stakeholder.m in Sources */,
+				8D5A5B8C196D973900974183 /* DonationDetailsTableViewController.m in Sources */,
 				8D1EF9221963941800D9D8B8 /* main.m in Sources */,
+				8D878C4819649131002780C4 /* MezzoPrototypeData.m in Sources */,
+				8DBADE1C19685DDF00CC66C8 /* MezzoCurrentDonationTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +519,7 @@
 				8D1EF9461963941800D9D8B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8D1EF9471963941800D9D8B8 /* Build configuration list for PBXNativeTarget "MezzoProt1Tests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +528,7 @@
 				8D1EF9491963941800D9D8B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
