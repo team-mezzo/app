@@ -59,7 +59,7 @@
 
 - (Donation *)donation
 {
-    if (!_donation) _donation = [[Donation alloc] init];
+    if (!_donation) { _donation = [[Donation alloc] init]; }
     return _donation;
 }
 

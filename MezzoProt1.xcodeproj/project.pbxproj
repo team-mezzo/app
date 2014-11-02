@@ -30,6 +30,8 @@
 		8D878C4519648F89002780C4 /* Stakeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D878C4219648F89002780C4 /* Stakeholder.m */; };
 		8D878C4819649131002780C4 /* MezzoPrototypeData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D878C4719649131002780C4 /* MezzoPrototypeData.m */; };
 		8DBADE1C19685DDF00CC66C8 /* MezzoCurrentDonationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBADE1B19685DDF00CC66C8 /* MezzoCurrentDonationTableViewCell.m */; };
+		8DF9C6CD1A05BC1E0043B5F1 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF9C6CC1A05BC1E0043B5F1 /* Message.m */; };
+		8DF9C6D01A05BC370043B5F1 /* MessageSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF9C6CF1A05BC370043B5F1 /* MessageSender.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,10 @@
 		8D878C4719649131002780C4 /* MezzoPrototypeData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MezzoPrototypeData.m; sourceTree = "<group>"; };
 		8DBADE1A19685DDF00CC66C8 /* MezzoCurrentDonationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MezzoCurrentDonationTableViewCell.h; sourceTree = "<group>"; };
 		8DBADE1B19685DDF00CC66C8 /* MezzoCurrentDonationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MezzoCurrentDonationTableViewCell.m; sourceTree = "<group>"; };
+		8DF9C6CB1A05BC1E0043B5F1 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Message.h; path = Messaging/Message.h; sourceTree = "<group>"; };
+		8DF9C6CC1A05BC1E0043B5F1 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Message.m; path = Messaging/Message.m; sourceTree = "<group>"; };
+		8DF9C6CE1A05BC370043B5F1 /* MessageSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessageSender.h; path = Messaging/MessageSender.h; sourceTree = "<group>"; };
+		8DF9C6CF1A05BC370043B5F1 /* MessageSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MessageSender.m; path = Messaging/MessageSender.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,18 +146,19 @@
 			isa = PBXGroup;
 			children = (
 				8D1EF9271963941800D9D8B8 /* Main.storyboard */,
-				8D5A5B8A196D973900974183 /* DonationDetailsTableViewController.h */,
-				8D5A5B8B196D973900974183 /* DonationDetailsTableViewController.m */,
-				8DBADE1A19685DDF00CC66C8 /* MezzoCurrentDonationTableViewCell.h */,
-				8DBADE1B19685DDF00CC66C8 /* MezzoCurrentDonationTableViewCell.m */,
-				8D52A49619649ABA00392EB2 /* CurrentDonationsTableViewController.h */,
-				8D52A49719649ABA00392EB2 /* CurrentDonationsTableViewController.m */,
-				8D878C3919648E1A002780C4 /* ChooseOrgTableViewController.h */,
-				8D878C3A19648E1A002780C4 /* ChooseOrgTableViewController.m */,
-				8D878C3619648221002780C4 /* NewDonationTableViewController.h */,
-				8D878C3719648221002780C4 /* NewDonationTableViewController.m */,
 				8D1EF92A1963941800D9D8B8 /* MezzoViewController.h */,
 				8D1EF92B1963941800D9D8B8 /* MezzoViewController.m */,
+				8D52A49619649ABA00392EB2 /* CurrentDonationsTableViewController.h */,
+				8D52A49719649ABA00392EB2 /* CurrentDonationsTableViewController.m */,
+				8DBADE1A19685DDF00CC66C8 /* MezzoCurrentDonationTableViewCell.h */,
+				8DBADE1B19685DDF00CC66C8 /* MezzoCurrentDonationTableViewCell.m */,
+				8D878C3619648221002780C4 /* NewDonationTableViewController.h */,
+				8D878C3719648221002780C4 /* NewDonationTableViewController.m */,
+				8D878C3919648E1A002780C4 /* ChooseOrgTableViewController.h */,
+				8D878C3A19648E1A002780C4 /* ChooseOrgTableViewController.m */,
+				8D5A5B8A196D973900974183 /* DonationDetailsTableViewController.h */,
+				8D5A5B8B196D973900974183 /* DonationDetailsTableViewController.m */,
+				8DF9C6C91A0586190043B5F1 /* Messaging */,
 				8D1EF92D1963941800D9D8B8 /* Images.xcassets */,
 				8D878C3C19648F89002780C4 /* Model */,
 				8D1EF91C1963941800D9D8B8 /* Supporting Files */,
@@ -198,11 +205,30 @@
 				8D878C3F19648F89002780C4 /* FoodPortion.h */,
 				8D878C4019648F89002780C4 /* FoodPortion.m */,
 				8D878C4119648F89002780C4 /* Stakeholder.h */,
+				8D878C4219648F89002780C4 /* Stakeholder.m */,
 				8D878C4619649131002780C4 /* MezzoPrototypeData.h */,
 				8D878C4719649131002780C4 /* MezzoPrototypeData.m */,
-				8D878C4219648F89002780C4 /* Stakeholder.m */,
+				8DF9C6CA1A059FB20043B5F1 /* Messaging */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8DF9C6C91A0586190043B5F1 /* Messaging */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Messaging;
+			sourceTree = "<group>";
+		};
+		8DF9C6CA1A059FB20043B5F1 /* Messaging */ = {
+			isa = PBXGroup;
+			children = (
+				8DF9C6CB1A05BC1E0043B5F1 /* Message.h */,
+				8DF9C6CC1A05BC1E0043B5F1 /* Message.m */,
+				8DF9C6CE1A05BC370043B5F1 /* MessageSender.h */,
+				8DF9C6CF1A05BC370043B5F1 /* MessageSender.m */,
+			);
+			name = Messaging;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,9 +337,11 @@
 				8D1EF9261963941800D9D8B8 /* MezzoAppDelegate.m in Sources */,
 				8D1EF92C1963941800D9D8B8 /* MezzoViewController.m in Sources */,
 				8D878C4519648F89002780C4 /* Stakeholder.m in Sources */,
+				8DF9C6D01A05BC370043B5F1 /* MessageSender.m in Sources */,
 				8D5A5B8C196D973900974183 /* DonationDetailsTableViewController.m in Sources */,
 				8D1EF9221963941800D9D8B8 /* main.m in Sources */,
 				8D878C4819649131002780C4 /* MezzoPrototypeData.m in Sources */,
+				8DF9C6CD1A05BC1E0043B5F1 /* Message.m in Sources */,
 				8DBADE1C19685DDF00CC66C8 /* MezzoCurrentDonationTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

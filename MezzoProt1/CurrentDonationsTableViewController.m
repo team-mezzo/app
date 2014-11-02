@@ -39,8 +39,9 @@
 
 - (NSMutableArray *)currentDonations
 {
-    if (!_currentDonations)
+    if (!_currentDonations) {
         _currentDonations = [[NSMutableArray alloc] init];
+    }
     return _currentDonations;
 }
 
@@ -48,7 +49,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 0) return 50;
+    if (indexPath.row == 0) { return 50;}
     return 91;
 }
 
@@ -113,7 +114,6 @@
     if ([segue.identifier isEqualToString:@"View Donation Details"]) {
         if ([segue.destinationViewController isKindOfClass:[DonationDetailsTableViewController class]])
         {
-            
             NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
             DonationDetailsTableViewController *VC = (DonationDetailsTableViewController *)segue.destinationViewController;
             

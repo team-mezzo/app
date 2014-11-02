@@ -21,13 +21,13 @@
 
 - (NSMutableArray *)orgContacts
 {
-    if (!_orgContacts) _orgContacts = [MezzoPrototypeData listOfPrototypeOrgs];
+    if (!_orgContacts) { _orgContacts = [MezzoPrototypeData listOfPrototypeOrgs]; }
     return _orgContacts;
 }
 
 - (Stakeholder *)org
 {
-    if (!_org) _org = [[Stakeholder alloc] init];
+    if (!_org) { _org = [[Stakeholder alloc] init]; }
     return _org;
 }
 

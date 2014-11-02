@@ -14,37 +14,37 @@
 
 - (NSString *)businessName
 {
-    if (!_businessName) _businessName = [[NSString alloc]init];
-    return _businessName;
+    if (!_businessName) { _businessName = [[NSString alloc]init]; }
+        return _businessName;
 }
 
 - (NSString *)managerName
 {
-    if (!_managerName) _managerName = [[NSString alloc] init];
-    return _managerName;
+    if (!_managerName) { _managerName = [[NSString alloc] init]; }
+        return _managerName;
 }
 
 - (NSString *)emailAddress
 {
-    if (!_emailAddress) _emailAddress = [[NSString alloc]init];
-    return _managerName;
+    if (!_emailAddress) { _emailAddress = [[NSString alloc]init]; }
+        return _managerName;
 }
 
 - (NSString *)phoneNumber
 {
-    if (!_phoneNumber) _phoneNumber = [[NSString alloc] init];
-    return _phoneNumber;
+    if (!_phoneNumber) { _phoneNumber = [[NSString alloc] init]; }
+        return _phoneNumber;
 }
 
 - (NSMutableArray *)friends
 {
-    if (!_friends) _friends = [[NSMutableArray alloc] init];
-    return _friends;
+    if (!_friends) { _friends = [[NSMutableArray alloc] init]; }
+        return _friends;
 }
 
 - (UIImage *)image
 {
-    if (!_image) _image = [[UIImage alloc] init];
+    if (!_image) { _image = [[UIImage alloc] init]; }
     return _image;
 }
 

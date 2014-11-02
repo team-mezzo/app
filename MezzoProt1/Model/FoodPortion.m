@@ -13,19 +13,19 @@
 //lazy instantiations:
 - (NSNumber *)rawAmtInlbs
 {
-    if (!_rawAmtInlbs) _rawAmtInlbs = [[NSNumber alloc] init];
+    if (!_rawAmtInlbs) { _rawAmtInlbs = [[NSNumber alloc] init]; }
     return _rawAmtInlbs;
 }
 
 - (NSNumber *)processedAmtInlbs
 {
-    if (!_processedAmtInlbs) _processedAmtInlbs = [[NSNumber alloc] init];
+    if (!_processedAmtInlbs) { _processedAmtInlbs = [[NSNumber alloc] init]; }
     return _processedAmtInlbs;
 }
 
 - (NSString *)foodDescription
 {
-    if (!_foodDescription) _foodDescription = [[NSString alloc] init];
+    if (!_foodDescription) { _foodDescription = [[NSString alloc] init]; }
     return _foodDescription;
 }
 

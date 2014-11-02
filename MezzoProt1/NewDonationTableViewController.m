@@ -44,7 +44,7 @@
 
 - (Donation *)donation
 {
-    if (!_donation) _donation = [[Donation alloc] init];
+    if (!_donation) { _donation = [[Donation alloc] init]; }
     return _donation;
 }
 
@@ -87,7 +87,9 @@
     //Recipient: taken care of when chosen org chosen
 }
 
-
+- (IBAction)cancelButtonPressed:(id)sender {
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+}
 
 #pragma mark - Navigation
 
@@ -99,7 +101,6 @@
             CurrentDonationsTableViewController *VC = (CurrentDonationsTableViewController *)segue.destinationViewController;
             [self saveDonation];
             [VC addDonation:self.donation];
-            //[VC.currentDonations addObject:self.donation];
         }
     }
     // Get the new view controller using [segue destinationViewController].

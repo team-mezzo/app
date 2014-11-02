@@ -14,36 +14,36 @@
 
 - (FoodPortion *)foodPortion
 {
-    if (!_foodPortion) _foodPortion = [[FoodPortion alloc] init];
+    if (!_foodPortion) { _foodPortion = [[FoodPortion alloc] init]; }
     return _foodPortion;
 }
 
 - (NSDate *)dateOfPickup
 {
-    if (!_dateOfPickup) _dateOfPickup = [NSDate date];
+    if (!_dateOfPickup) { _dateOfPickup = [NSDate date]; }
     return _dateOfPickup;
 }
 
 - (Stakeholder *)donor
 {
-    if (!_donor) _donor = [[Stakeholder alloc] init];
+    if (!_donor) { _donor = [[Stakeholder alloc] init]; }
     return _donor;
 }
 
 - (Stakeholder *)recipient
 {
-    if (!_recipient) _recipient = [[Stakeholder alloc] init];
+    if (!_recipient) { _recipient = [[Stakeholder alloc] init]; }
     return _recipient;
 }
 
 - (NSDictionary *)statusStages
 {
-    if (!_statusStages) _statusStages = [[NSDictionary alloc] initWithObjectsAndKeys:[UIColor lightGrayColor],
+    if (!_statusStages) { _statusStages = [[NSDictionary alloc] initWithObjectsAndKeys:[UIColor lightGrayColor],
                                          @"uninitiated",
                                          [UIColor darkGrayColor], @"donationAcceptedByOrg",
                                          [UIColor orangeColor], @"driverLeftOrg",
                                          [UIColor yellowColor], @"driverArrivedAtDonor",
-                                         [UIColor greenColor], @"donationComplete", nil];
+                                           [UIColor greenColor], @"donationComplete", nil]; }
     return _statusStages;
 }
 
@@ -54,13 +54,13 @@
     NSArray *stages = [self.statusStages allKeys];
     
     for (int i = 0; i < [stages count]; i++) {
-        if ([status isEqualToString:stages[i]]) status = stages[i];
+        if ([status isEqualToString:stages[i]]) { status = stages[i]; }
     }
 }
 
 - (NSString *)status
 {
-    if (!_status) _status = @"uninitiated";
+    if (!_status) { _status = @"uninitiated"; }
     return _status;
 }
 
