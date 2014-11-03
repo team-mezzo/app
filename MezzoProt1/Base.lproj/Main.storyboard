@@ -61,7 +61,7 @@
         <!--Messaging-->
         <scene sceneID="hhO-gS-5P8">
             <objects>
-                <viewController id="u7Y-rO-qj8" sceneMemberID="viewController">
+                <viewController id="u7Y-rO-qj8" customClass="SendMessageViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1N8-Fk-TpH"/>
                         <viewControllerLayoutGuide type="bottom" id="5RG-i5-lhS"/>
@@ -70,10 +70,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FUP-cg-AJf">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Enter your message here...." translatesAutoresizingMaskIntoConstraints="NO" id="FUP-cg-AJf">
                                 <rect key="frame" x="16" y="20" width="288" height="128"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -82,11 +81,17 @@
                                 <state key="normal" title="Send">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="sendMessageButton:" destination="u7Y-rO-qj8" eventType="touchUpInside" id="boF-ej-Mh4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Messaging" id="g8X-Ck-RVN"/>
+                    <connections>
+                        <outlet property="messageContentTextView" destination="FUP-cg-AJf" id="iir-OM-lk0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dae-zL-bv5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -11,6 +11,9 @@
 @implementation MessageSender
 
 - (BOOL)sendMessage:(Message *)message {
+    message.dateSent = [NSDate date];
+    
+    NSLog(@"%@", message);
     return YES;
 }
 

@@ -66,7 +66,7 @@
 
 - (NSString *)description
 {
-    return (!self.businessName) ? [NSString stringWithFormat:@"%@", self.managerName] :[NSString stringWithFormat:@"%@ from %@", self.managerName, self.businessName];
+    return (!self.managerName) ? [NSString stringWithFormat:@"%@", self.businessName] :[NSString stringWithFormat:@"%@ from %@", self.managerName, self.businessName];
 }
 
 @end

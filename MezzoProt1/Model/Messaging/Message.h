@@ -17,4 +17,7 @@
 @property (strong, nonatomic) Stakeholder *sender;
 @property (strong, nonatomic) Stakeholder *receiver;
 
++ (Message *)messageWithContent:(NSString *)content;
++ (Message *)messageWithContent:(NSString *)content Sender:(Stakeholder *)sender Receiver:(Stakeholder *)receiver;
+
 @end

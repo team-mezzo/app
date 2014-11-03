@@ -27,6 +27,7 @@
 - (Stakeholder *)sender {
     if (!_sender) {
         _sender = [[Stakeholder alloc] init];
+        _sender.businessName = @"self";
     }
     return _sender;
 }
@@ -34,9 +35,29 @@
 - (Stakeholder *)receiver {
     if (!_receiver) {
         _receiver = [[Stakeholder alloc] init];
+        _receiver.businessName = @"some person";
     }
     return _receiver;
 }
 
+
++ (Message *)messageWithContent:(NSString *)content {
+    Message *message = [[Message alloc] init];
+    message.content = content;
+    return message;
+}
+
+
++ (Message *)messageWithContent:(NSString *)content Sender:(Stakeholder *)sender Receiver:(Stakeholder *)receiver {
+    Message *message = [Message messageWithContent:content];
+    message.sender = sender;
+    message.receiver = receiver;
+    return message;
+}
+
+- (NSString *)description {
+    NSString *ret = [NSString stringWithFormat:@"Sent on: %@\nSender: %@\nReceiver: %@\nContent: %@", self.dateSent, self.sender, self.receiver, self.content];
+    return ret;
+}
 
 @end
