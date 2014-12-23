@@ -77,9 +77,9 @@
 - (void)saveDonation
 {
     //Describe Donation:
-    self.donation.foodPortion.foodDescription = self.foodDescription.text;
-    self.donation.foodPortion.rawAmtInlbs = [NSNumber numberWithInt:(int)self.rawFoodSlider.value];
-    self.donation.foodPortion.processedAmtInlbs = [NSNumber numberWithInt:(int)self.processedFoodSlider.value];
+    [self.donation setFoodPortionWithDescr:self.foodDescription.text
+                                       raw:[NSNumber numberWithInt:(int)self.rawFoodSlider.value]
+                                 processed:[NSNumber numberWithInt:(int)self.processedFoodSlider.value]];
     
     //Date & Time:
     self.donation.dateOfPickup = self.datePicker.date;

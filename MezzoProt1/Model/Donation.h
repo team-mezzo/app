@@ -12,6 +12,8 @@
 
 @interface Donation : NSObject
 
+@property (strong, nonatomic) NSString *ID;
+
 //description
 @property (strong, nonatomic) FoodPortion *foodPortion;
 @property (strong, nonatomic) NSDate *dateOfPickup; //includes time
@@ -23,6 +25,7 @@
 @property (strong, nonatomic) NSString *status;
 //STAGES-- uninitiated, donationAcceptedByOrg, driverLeftOrg, driverArrivedAtDonor, donationComplete
 
+- (void)setFoodPortionWithDescr:(NSString *)desc raw:(NSNumber *)num1 processed:(NSNumber *)num2;
 - (NSArray *)requiredInfo;
 
 @end

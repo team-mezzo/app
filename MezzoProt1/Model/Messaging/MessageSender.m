@@ -12,7 +12,7 @@
 
 - (BOOL)sendMessage:(Message *)message {
     message.dateSent = [NSDate date];
-    
+    // will eventually send message over network, but for now, just nslogs message
     NSLog(@"%@", message);
     return YES;
 }

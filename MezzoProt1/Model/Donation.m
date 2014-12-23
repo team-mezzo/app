@@ -12,6 +12,11 @@
 
 //lazy instantiations:
 
+- (NSString *)ID {
+    if (!_ID) {_ID = [[NSString alloc] init]; }
+    return _ID;
+}
+
 - (FoodPortion *)foodPortion
 {
     if (!_foodPortion) { _foodPortion = [[FoodPortion alloc] init]; }
@@ -73,6 +78,12 @@
 - (NSArray *)requiredInfo
 {
     return @[self.foodPortion.rawAmtInlbs, self.foodPortion.processedAmtInlbs, self.dateOfPickup, self.recipient, self.donor];
+}
+
+- (void)setFoodPortionWithDescr:(NSString *)desc raw:(NSNumber *)num1 processed:(NSNumber *)num2 {
+    self.foodPortion.foodDescription = desc;
+    self.foodPortion.rawAmtInlbs = num1;
+    self.foodPortion.processedAmtInlbs = num2;
 }
 
 @end

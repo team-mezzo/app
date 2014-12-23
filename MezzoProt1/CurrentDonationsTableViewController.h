@@ -11,6 +11,7 @@
 #import "MezzoPrototypeData.h"
 #import "DonationDetailsTableViewController.h"
 #import "NewDonationTableViewController.h"
+#import "DonationDownloader.h"
 
 @interface CurrentDonationsTableViewController : UITableViewController
 
