@@ -13,5 +13,6 @@
 @property (nonatomic) NSNumber *rawAmtInlbs;
 @property (nonatomic) NSNumber *processedAmtInlbs;
 @property (strong, nonatomic) NSString *foodDescription;
+@property (strong, nonatomic) UIImage *image;
 
 @end

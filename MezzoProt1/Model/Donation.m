@@ -12,8 +12,8 @@
 
 //lazy instantiations:
 
-- (NSString *)ID {
-    if (!_ID) {_ID = [[NSString alloc] init]; }
+- (NSNumber *)ID {
+    if (!_ID) {_ID = [[NSNumber alloc] init]; }
     return _ID;
 }
 
@@ -59,7 +59,7 @@
     NSArray *stages = [self.statusStages allKeys];
     
     for (int i = 0; i < [stages count]; i++) {
-        if ([status isEqualToString:stages[i]]) { status = stages[i]; }
+        if ([status isEqualToString:stages[i]]) { _status = stages[i]; }
     }
 }
 

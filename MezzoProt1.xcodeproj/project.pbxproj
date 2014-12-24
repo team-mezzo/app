@@ -30,6 +30,7 @@
 		8D878C4519648F89002780C4 /* Stakeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D878C4219648F89002780C4 /* Stakeholder.m */; };
 		8D878C4819649131002780C4 /* MezzoPrototypeData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D878C4719649131002780C4 /* MezzoPrototypeData.m */; };
 		8DBADE1C19685DDF00CC66C8 /* MezzoCurrentDonationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBADE1B19685DDF00CC66C8 /* MezzoCurrentDonationTableViewCell.m */; };
+		8DCAB4001A4B347E0038DFCE /* donation.json in Resources */ = {isa = PBXBuildFile; fileRef = 8DCAB3FF1A4B347E0038DFCE /* donation.json */; };
 		8DF9C6CD1A05BC1E0043B5F1 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF9C6CC1A05BC1E0043B5F1 /* Message.m */; };
 		8DF9C6D01A05BC370043B5F1 /* MessageSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF9C6CF1A05BC370043B5F1 /* MessageSender.m */; };
 		8DF9C6D41A05C0130043B5F1 /* SendMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF9C6D31A05C0130043B5F1 /* SendMessageViewController.m */; };
@@ -102,6 +103,7 @@
 		8D878C4719649131002780C4 /* MezzoPrototypeData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MezzoPrototypeData.m; sourceTree = "<group>"; };
 		8DBADE1A19685DDF00CC66C8 /* MezzoCurrentDonationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MezzoCurrentDonationTableViewCell.h; sourceTree = "<group>"; };
 		8DBADE1B19685DDF00CC66C8 /* MezzoCurrentDonationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MezzoCurrentDonationTableViewCell.m; sourceTree = "<group>"; };
+		8DCAB3FF1A4B347E0038DFCE /* donation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = donation.json; sourceTree = "<group>"; };
 		8DF9C6CB1A05BC1E0043B5F1 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Message.h; path = Messaging/Message.h; sourceTree = "<group>"; };
 		8DF9C6CC1A05BC1E0043B5F1 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Message.m; path = Messaging/Message.m; sourceTree = "<group>"; };
 		8DF9C6CE1A05BC370043B5F1 /* MessageSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessageSender.h; path = Messaging/MessageSender.h; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 		8D1EF91C1963941800D9D8B8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8DCAB3FF1A4B347E0038DFCE /* donation.json */,
 				8D1EF9241963941800D9D8B8 /* MezzoAppDelegate.h */,
 				8D1EF9251963941800D9D8B8 /* MezzoAppDelegate.m */,
 				8D1EF91D1963941800D9D8B8 /* MezzoProt1-Info.plist */,
@@ -444,6 +447,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DCAB4001A4B347E0038DFCE /* donation.json in Resources */,
 				8D1EF92E1963941800D9D8B8 /* Images.xcassets in Resources */,
 				8D1EF9201963941800D9D8B8 /* InfoPlist.strings in Resources */,
 				8D1EF9291963941800D9D8B8 /* Main.storyboard in Resources */,

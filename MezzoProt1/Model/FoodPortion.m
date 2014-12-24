@@ -29,6 +29,12 @@
     return _foodDescription;
 }
 
+- (UIImage *)image
+{
+    if (!_image) { _image = [[UIImage alloc] init]; }
+    return _image;
+}
+
 - (NSString *)description
 {
     return [NSString stringWithFormat:@"Amount of Raw Food: %@\nAmount of Processed Food: %@\nDescription: %@", self.rawAmtInlbs, self.processedAmtInlbs, self.foodDescription];

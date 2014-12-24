@@ -23,8 +23,9 @@
     self.navigationItem.hidesBackButton = YES;
     
     DonationDownloader *loader = [[DonationDownloader alloc] init];
-    [loader downloadFromURLString:@"INSERT URL"];
+    [loader loadFromJSONFile];
     [self.currentDonations addObject:loader.donation];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     

@@ -39,5 +39,18 @@ static NSString * const baseURLString = @"INSERT URL";
     }];
 }
 
+- (void)loadFromJSONFile {
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"donation" ofType:@"json"];
+    NSData *donationData = [NSData dataWithContentsOfFile:filePath
+                                                  options:NSDataReadingMappedIfSafe
+                                                    error:nil];
+    
+    NSDictionary *donationDict = [NSJSONSerialization JSONObjectWithData:donationData
+                                                                 options:NSJSONReadingAllowFragments
+                                                                   error:nil];
+    
+    self.donation = [donationDict donation];
+}
+
 
 @end

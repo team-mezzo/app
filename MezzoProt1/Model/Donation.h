@@ -12,7 +12,7 @@
 
 @interface Donation : NSObject
 
-@property (strong, nonatomic) NSString *ID;
+@property (strong, nonatomic) NSNumber *ID;
 
 //description
 @property (strong, nonatomic) FoodPortion *foodPortion;

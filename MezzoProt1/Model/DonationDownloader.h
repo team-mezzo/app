@@ -14,5 +14,6 @@
 @property (strong, nonatomic) Donation *donation;
 
 - (void)downloadFromURLString:(NSString *)urlString;
+- (void)loadFromJSONFile; //for testing
 
 @end
