@@ -24,7 +24,9 @@
     
     DonationDownloader *loader = [[DonationDownloader alloc] init];
     [loader loadFromJSONFile];
-    [self.currentDonations addObject:loader.donation];
+    for (id obj in loader.currentDonations) {
+        [self.currentDonations addObject:obj];
+    }
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

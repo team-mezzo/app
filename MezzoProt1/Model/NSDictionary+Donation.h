@@ -11,6 +11,6 @@
 
 @interface NSDictionary (Donation)
 
-- (NSArray *)donation;
+- (NSArray *)listDonations;
 
 @end

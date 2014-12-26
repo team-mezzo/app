@@ -11,7 +11,7 @@
 
 @interface DonationDownloader : NSObject
 
-@property (strong, nonatomic) Donation *donation;
+@property (strong, nonatomic) NSArray *currentDonations;
 
 - (void)downloadFromURLString:(NSString *)urlString;
 - (void)loadFromJSONFile; //for testing

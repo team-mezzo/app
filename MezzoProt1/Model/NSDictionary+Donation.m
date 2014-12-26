@@ -10,23 +10,26 @@
 
 @implementation NSDictionary (Donation)
 
-- (NSArray *)donation {
-    //NSMutableArray *array = [[NSMutableArray alloc] init];
+- (NSArray *)listDonations {
+    NSMutableArray *array = [[NSMutableArray alloc] init];
     
-    //for (id object in self[@"current_donations"]) {
+    for (id object in self[@"current_donations"]) {
         Donation *donation = [[Donation alloc] init];
-        donation.ID = self[@"id"];
+        donation.ID = object[@"id"];
         
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH':'mm':'ss'.'SSS'Z'"];
-        donation.dateOfPickup = [dateFormatter dateFromString:self[@"pickup_start"]];
-        donation.status = self[@"status"];
-        NSLog(@"%@, %@", self[@"status"], [self[@"status"] class]);
+        donation.dateOfPickup = [dateFormatter dateFromString:object[@"pickup_start"]];
         
-        [donation setFoodPortionWithDescr:self[@"food_portion"][@"description"] raw:self[@"food_portion"][@"raw_amount"] processed:self[@"food_portion"][@"processed_amount"]];
-    //}
+        donation.status = object[@"status"];
+        
+        [donation setFoodPortionWithDescr:object[@"food_portion"][@"description"]
+                                      raw:object[@"food_portion"][@"raw_amount"]
+                                processed:object[@"food_portion"][@"processed_amount"]];
+        [array addObject:donation];
+    }
     
-    return donation;
+    return array;
 }
 
 @end

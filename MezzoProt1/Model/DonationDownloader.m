@@ -12,9 +12,10 @@
 
 static NSString * const baseURLString = @"INSERT URL";
 
-- (Donation *)donation {
-    if (!_donation) { _donation = [[Donation alloc] init]; }
-    return _donation;
+- (NSArray *)currentDonations
+{
+    if (!_currentDonations) { _currentDonations = [[NSArray alloc] init]; }
+    return _currentDonations;
 }
 
 - (void)downloadFromURLString:(NSString *)urlString {
@@ -27,7 +28,7 @@ static NSString * const baseURLString = @"INSERT URL";
 #warning add key below
     [manager GET:urlString parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
         NSDictionary *dict = (NSDictionary *)responseObject;
-        self.donation = [dict donation];
+        self.currentDonations = [dict listDonations];
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error Retrieving Donation(s)"
@@ -40,7 +41,7 @@ static NSString * const baseURLString = @"INSERT URL";
 }
 
 - (void)loadFromJSONFile {
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"donation" ofType:@"json"];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"donationArray" ofType:@"json"];
     NSData *donationData = [NSData dataWithContentsOfFile:filePath
                                                   options:NSDataReadingMappedIfSafe
                                                     error:nil];
@@ -49,7 +50,7 @@ static NSString * const baseURLString = @"INSERT URL";
                                                                  options:NSJSONReadingAllowFragments
                                                                    error:nil];
     
-    self.donation = [donationDict donation];
+    self.currentDonations = [donationDict listDonations];
 }
 
 
