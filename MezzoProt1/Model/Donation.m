@@ -43,11 +43,11 @@
 
 - (NSDictionary *)statusStages
 {
-    if (!_statusStages) { _statusStages = [[NSDictionary alloc] initWithObjectsAndKeys:[UIColor lightGrayColor],
-                                         @"uninitiated",
-                                         [UIColor darkGrayColor], @"donationAcceptedByOrg",
-                                         [UIColor orangeColor], @"driverLeftOrg",
-                                         [UIColor yellowColor], @"driverArrivedAtDonor",
+    if (!_statusStages) { _statusStages = [[NSDictionary alloc] initWithObjectsAndKeys:
+                                           [UIColor lightGrayColor], @"uninitiated",
+                                           [UIColor darkGrayColor], @"donationAcceptedByOrg",
+                                           [UIColor orangeColor], @"driverLeftOrg",
+                                           [UIColor yellowColor], @"driverArrivedAtDonor",
                                            [UIColor greenColor], @"donationComplete", nil]; }
     return _statusStages;
 }

@@ -10,7 +10,7 @@
 
 @implementation DonationDownloader
 
-static NSString * const baseURLString = @"INSERT URL";
+static NSString * const baseURLString = @"http://mezzo.magicalpanda.com:3000/donations/";
 
 - (NSArray *)currentDonations
 {
@@ -18,17 +18,17 @@ static NSString * const baseURLString = @"INSERT URL";
     return _currentDonations;
 }
 
-- (void)downloadFromURLString:(NSString *)urlString {
+- (void)downloadCurrentDonations {
     NSURL *baseURL = [NSURL URLWithString:baseURLString];
     NSDictionary *parameters = @{@"format" : @"json"};
     
     AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:baseURL];
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     
-#warning add key below
-    [manager GET:urlString parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
+    [manager GET:@"1" parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
         NSDictionary *dict = (NSDictionary *)responseObject;
-        self.currentDonations = [dict listDonations];
+        self.currentDonations = @[[dict singleDonation]];
+        NSLog(@"%i", [self.currentDonations count]);
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error Retrieving Donation(s)"
@@ -41,7 +41,7 @@ static NSString * const baseURLString = @"INSERT URL";
 }
 
 - (void)loadFromJSONFile {
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"donationArray" ofType:@"json"];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"donation" ofType:@"json"];
     NSData *donationData = [NSData dataWithContentsOfFile:filePath
                                                   options:NSDataReadingMappedIfSafe
                                                     error:nil];
@@ -50,7 +50,7 @@ static NSString * const baseURLString = @"INSERT URL";
                                                                  options:NSJSONReadingAllowFragments
                                                                    error:nil];
     
-    self.currentDonations = [donationDict listDonations];
+    self.currentDonations = @[[donationDict singleDonation]];
 }
 
 

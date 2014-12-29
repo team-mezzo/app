@@ -32,4 +32,20 @@
     return array;
 }
 
+- (Donation *)singleDonation {
+    Donation *donation = [[Donation alloc] init];
+    donation.ID = self[@"id"];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'SSS'Z'"];
+    donation.dateOfPickup = [dateFormatter dateFromString:self[@"pickup_start"]];
+    //donation.status = self[@"status"];
+    
+    [donation setFoodPortionWithDescr:self[@"food_portion"][@"description"]
+                                  raw:self[@"food_portion"][@"raw_amount"]
+                            processed:self[@"food_portion"][@"processed_amount"]];
+    
+    return donation;
+}
+
 @end

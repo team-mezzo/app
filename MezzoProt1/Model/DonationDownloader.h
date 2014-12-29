@@ -13,7 +13,7 @@
 
 @property (strong, nonatomic) NSArray *currentDonations;
 
-- (void)downloadFromURLString:(NSString *)urlString;
+- (void)downloadCurrentDonations;
 - (void)loadFromJSONFile; //for testing
 
 @end

@@ -23,7 +23,8 @@
     self.navigationItem.hidesBackButton = YES;
     
     DonationDownloader *loader = [[DonationDownloader alloc] init];
-    [loader loadFromJSONFile];
+    [loader downloadCurrentDonations];
+    NSLog(@"hi%i", [loader.currentDonations count]);
     for (id obj in loader.currentDonations) {
         [self.currentDonations addObject:obj];
     }
