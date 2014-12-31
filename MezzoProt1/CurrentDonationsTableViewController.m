@@ -8,13 +8,34 @@
 
 #import "CurrentDonationsTableViewController.h"
 
+static void const * CurrentDonationsObservingContext = &CurrentDonationsObservingContext;
+
 @interface CurrentDonationsTableViewController ()
+
+@property (nonatomic, strong) DonationDownloader *loader;
 
 @end
 
 @implementation CurrentDonationsTableViewController
 
+-(void)dealloc
+{
+    self.loader = nil;
+}
+
 #pragma mark - VC lifecycle
+
+- (void)setLoader:(DonationDownloader *)loader;
+{
+    [_loader removeObserver:self
+                     forKeyPath:@"currentDonations"
+                        context:&CurrentDonationsObservingContext];
+    _loader = loader;
+    [_loader addObserver:self
+                  forKeyPath:@"currentDonations"
+                     options:NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionNew
+                     context:&CurrentDonationsObservingContext];
+}
 
 - (void)viewDidLoad
 {
@@ -22,18 +43,45 @@
     
     self.navigationItem.hidesBackButton = YES;
     
-    DonationDownloader *loader = [[DonationDownloader alloc] init];
-    [loader downloadCurrentDonations];
-    NSLog(@"hi%i", [loader.currentDonations count]);
-    for (id obj in loader.currentDonations) {
-        [self.currentDonations addObject:obj];
-    }
+    self.loader = [[DonationDownloader alloc] init];
+    [self.loader downloadCurrentDonations];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+-(void) showDonations:(NSArray *)donations;
+{
+    NSLog(@"hi %zd", [donations count]);
+    for (id obj in donations) {
+        [self.currentDonations addObject:obj];
+    }
+    [self.tableView reloadData];
+}
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context;
+{
+    if (context == CurrentDonationsObservingContext)
+    {
+        if (object == self.loader)
+        {
+            if ([keyPath isEqualToString:@"currentDonations"])
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    NSArray *donations = [change valueForKey:NSKeyValueChangeNewKey];
+                    donations = [[NSNull null] isEqual:donations] ? nil : donations;
+                    [self showDonations:donations];
+                });
+            }
+        }
+    }
+    else
+    {
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated{

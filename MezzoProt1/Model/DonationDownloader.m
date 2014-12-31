@@ -14,7 +14,7 @@ static NSString * const baseURLString = @"http://mezzo.magicalpanda.com:3000/don
 
 - (NSArray *)currentDonations
 {
-    if (!_currentDonations) { _currentDonations = [[NSArray alloc] init]; }
+    if (!_currentDonations) { _currentDonations = @[]; }
     return _currentDonations;
 }
 
@@ -28,7 +28,7 @@ static NSString * const baseURLString = @"http://mezzo.magicalpanda.com:3000/don
     [manager GET:@"1" parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
         NSDictionary *dict = (NSDictionary *)responseObject;
         self.currentDonations = @[[dict singleDonation]];
-        NSLog(@"%i", [self.currentDonations count]);
+        NSLog(@"%zd", [self.currentDonations count]);
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error Retrieving Donation(s)"
@@ -38,6 +38,7 @@ static NSString * const baseURLString = @"http://mezzo.magicalpanda.com:3000/don
                                                   otherButtonTitles:nil];
         [alertView show];
     }];
+    
 }
 
 - (void)loadFromJSONFile {
